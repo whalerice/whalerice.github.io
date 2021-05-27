@@ -1,0 +1,14 @@
+<header class="header">
+	<section class="nav-bar">
+		<div class="nav-item">
+			<button type="button" class="btn btn-menu" onclick="toggleSidebar()">
+				<i class="material-icons-round">menu</i>
+			</button>
+			<div class="nav-item">
+				<span class="avatar" style="background-image: url({{site.social.avatar}});"></span>
+				<a href="/" class="site-title">{{site.title}}</a>
+			</div>
+		</div>
+		<div class="nav-item">{% include menu.html %}</div>
+	</section>
+</header>

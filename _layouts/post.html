@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<article class="post">
+	<section class="post-top">
+		<div class="post-title">{{ page.title }}</div>
+		<div class="post-info">
+			<span class="author">
+				{{ page.author | default: site.social.name }}
+			</span>
+			<span class="date">{{ page.date | date: "%F" }}</span>
+		</div>
+	</section>
+	<section class="post-content">
+		{{ content }}
+		<div class="post-navigation">
+			<div>
+				{% if page.previous.url %}
+				<a href="{{page.previous.url}}" class="page-link lt">
+					<i class="material-icons-round"> arrow_back </i>
+					<span>{{page.previous.title}}</span>
+				</a>
+			</div>
+			<div">
+				{% endif %} {% if page.next.url %}
+				<a href="{{page.next.url}}" class="page-link rt">
+					<span>{{page.next.title}}</span>
+					<i class="material-icons-round"> arrow_forward </i>
+				</a>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+	<!-- <section class="post-bottom">post bottom</section> -->
+</article>

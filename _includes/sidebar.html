@@ -1,0 +1,23 @@
+<section class="sidebar">
+	<button type="button" class="btn btn-close" onclick="toggleSidebar()">
+		<i class="material-icons-round"> close </i>
+	</button>
+	<div class="profile">
+		<span class="avatar" style="background-image: url({{site.social.avatar}});">
+		</span>
+		<h2 class="blog-name">{{site.title}}</h2>
+		<p class="nick-name">{{site.social.name}}</p>
+		<div class="social">
+			<a href="mailto:{{site.social.email}}" target="_blank" class="link">
+				<i class="material-icons-round"> email </i>
+			</a>
+			<a href="{{site.social.github}}" target="_blank" class="link">
+				<i class="ico ico-github"></i>
+			</a>
+			<a href="{{site.url}}/feed.xml" target="_blank" class="link">
+				<i class="material-icons-round"> rss_feed </i>
+			</a>
+		</div>
+	</div>
+	<nav class="nav">{% include menu.html %}</nav>
+</section>

@@ -1,0 +1,68 @@
+// body {
+// 	background-color: yellow;
+// 	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+// }
+
+// ::-webkit-scrollbar {
+// 	width: 10px; /* 세로축 스크롤바 길이 */
+// 	height: 20px; /* 가로축 스크롤바 길이 */
+// }
+// ::-webkit-scrollbar-track {
+// 	background-color: lightblue;
+// }
+// ::-webkit-scrollbar-track-piece {
+// 	background-color: gray;
+// }
+// ::-webkit-scrollbar-thumb {
+// 	border-radius: 8px;
+// 	background-color: black;
+// }
+// ::-webkit-scrollbar-button {
+// 	background-color: darkblue;
+// 	width: 20px;
+// 	height: 10px;
+// }
+// ::-webkit-scrollbar-button:start {
+// 	background-color: red; /* Top, Left 방향의 이동버튼 */
+// }
+// ::-webkit-scrollbar-button:end {
+// 	background-color: orange; /* Bottom, Right 방향의 이동버튼 */
+// }
+// ::-webkit-scrollbar-button:vertical:increment {
+// }
+// ::-webkit-scrollbar-button:vertical:decrement {
+// }
+// ::-webkit-scrollbar-corner {
+// 	background-color: violet; /* 우측 하단의 코너 부분 */
+// }
+// ::-webkit-resizer {
+// 	background-color: green;
+// }
+
+* {
+	box-sizing: border-box;
+	font-family: $font_family;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	font-weight: 400;
+	color: $cow_default;
+	display: flex;
+	flex-flow: column;
+}
+code {
+	font-family: 'IBM Plex Mono', 'NanumBarunGothic', monospace;
+}

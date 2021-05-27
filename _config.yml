@@ -1,0 +1,32 @@
+title: 매일살이
+
+#sass
+sass:
+  sass_dir: _sass
+  style: compressed
+  sourcemap: naver
+
+encoding: utf-8
+
+asset_url: /assets
+
+#codepen
+codepen_username: joywoo
+
+social:
+  name: '고래밥양념'
+  email: joyfulforest@gmail.com # change to your email address
+  github: https://github.com/joy-woo
+  avatar: https://m.marvelcollection.co.kr/web/product/medium/202010/53910a088260cf5de43a751daa8023ae.jpg
+# categories: ['any', 'programming', 'portfolio', 'about']
+# [html,css,scss,javascript, node,vue,react]
+
+paginate: 4
+
+paginate_path: '/blog/page:num/'
+
+jekyll_admin:
+  homepage: 'pages'
+
+  # Google Analytics
+google_analytics: G-TZ39L8X5FT
