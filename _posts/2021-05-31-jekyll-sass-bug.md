@@ -13,7 +13,7 @@ Jekyll::Converters::Scss encountered an error while converting 'assets/css/main.
 ```
 
 아놔.. 이거 뭐지? 
-![버그1]({{site.url}}/assets/images/sass_bug_01.png){:class="img-responsive"}
+![버그이미지]({{site.url}}/assets/images/sass_bug_01.png){:class="img-responsive"}
 
 
 
