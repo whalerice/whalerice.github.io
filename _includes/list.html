@@ -26,9 +26,9 @@
 	{% for post in currentData %}
 	<div class="post-preview">
 		<h1 class="title">
-			<a href="{{ post.url }}" class="link">{{ post.title | truncate:15 }} </a>
+			<a href="{{ post.url }}" class="link">{{ post.title | truncate:40 }} </a>
 		</h1>
-		<p class="text">{{ post.excerpt |strip_html | truncatewords: 30}}</p>
+		<p class="text">{{ post.excerpt |strip_html | truncatewords: 40}}</p>
 
 		<ul class="post-meta">
 			<li class="meta-item">

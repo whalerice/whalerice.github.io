@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React Setting
+title: React Setting(Next.js)
 date:   2021-05-05 14:53:45 +0900
 categories: programming
 tag: [React]
