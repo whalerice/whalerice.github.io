@@ -68,7 +68,10 @@ react-scripts  -> react-app-rewired 수정
 <br />
 
 ### config-overrides.js, .babelrc(babel config파일) 생성 (package.json와 같은 위치)
+
 - config-overrides.js : babel config파일을 override할 수 있도록 코드를 작성
+<br />
+
 ```
 const { useBabelRc, addWebpackPlugin, override } = require('customize-cra');
 const webpack = require('webpack');
