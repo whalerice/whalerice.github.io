@@ -6,7 +6,6 @@ categories: programming
 tag: [React]
 ---
 
-# airbnb rules
 
 `package.json` 내 airbnb rules 설정
 
