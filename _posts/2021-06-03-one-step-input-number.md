@@ -1,9 +1,10 @@
 ---
 title: input number 한 자리씩 입력되도록 만들어보자
 layout: post
+date:   2021-06-03 22:10:01 +0900
 categories:
 - programming
-tag: AngualrJS
+tag: AngularJS
 ---
 
 ## input number 입력시 한자리씩 입력되도록 적용
