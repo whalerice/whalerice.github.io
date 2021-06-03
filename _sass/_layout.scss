@@ -22,7 +22,7 @@
 	width: 100%;
 	padding-top: $header_height;
 	flex: auto;
-	max-width: $breakpoints_xxl;
+	max-width: $device_max;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -38,7 +38,7 @@
 	height: 100%;
 	padding-right: 1.6rem;
 	padding-left: 1.6rem;
-	max-width: $breakpoints_xxl;
+	max-width: $device_max;
 	margin: auto;
 	.nav-item {
 		display: flex;
@@ -460,5 +460,5 @@
 }
 
 // XX-Large devices (larger desktops, $breakpoints_xxl and up)
-@media (min-width: $breakpoints_xxl) {
+@media (min-width: 1400px) {
 }
