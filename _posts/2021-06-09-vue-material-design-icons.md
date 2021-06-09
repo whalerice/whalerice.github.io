@@ -22,9 +22,12 @@ npm i -D @mid/font
 css파일에 추가하거나  js파일에 추가하거나 둘중 한 곳에 추가 하면된다.
 
 - css or scss에 추가
+
 ```
 @import '~@mdi/font/css/materialdesignicons.css';
 ```
+
+
 - mian.js에 추가
 
 ```
@@ -34,6 +37,7 @@ import '@mdi/font/css/materialdesignicons.css';
 ### 3. 사용
 
 - 여러개 한번에 사용해야 할 때 `mdi-set` 내부에 선언한다.
+
 ```
 <div class="mdi-set">
 	<span class="mdi-star"></span>
@@ -43,7 +47,9 @@ import '@mdi/font/css/materialdesignicons.css';
 	<span class="mdi-star-outline"></span>
 </div>
 ```
+
 - 하나만 사용하면 될 때 `mdi-set`를 함께 선언한다.
+
 ```
 <i class="mdi-set mdi-ab-testing"></i>
 <span class="mdi-set mdi-head-cog"></span>
