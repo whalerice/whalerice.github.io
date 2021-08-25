@@ -15,7 +15,7 @@ tag: [Vue]
 ### 1. 패키지 설치
 
 ```
-npm i -D @mid/font
+npm i @mid/font
 ```
 
 ### 2. css 추가
