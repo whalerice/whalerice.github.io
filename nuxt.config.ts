@@ -24,6 +24,14 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ["/"],
     },
+    static: {
+      publicAssets: [
+        {
+          dir: "public",
+          maxAge: 60 * 60 * 24 * 365, // 1년
+        },
+      ],
+    },
   },
   ssr: true,
   experimental: {
