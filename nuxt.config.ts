@@ -25,7 +25,7 @@ export default defineNuxtConfig({
       routes: ["/"],
     },
   },
-  ssr: false,
+  ssr: true,
   experimental: {
     payloadExtraction: false,
   },
