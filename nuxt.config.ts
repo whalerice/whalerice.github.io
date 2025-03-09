@@ -12,14 +12,7 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    prerender: {
-      routes: ["/"],
-      crawlLinks: true,
-    },
     preset: "github-pages",
-    output: {
-      publicDir: ".output/public",
-    },
   },
   ssr: false,
   experimental: {
