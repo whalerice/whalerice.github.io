@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     preset: "github-pages",
     prerender: {
       crawlLinks: true,
-      routes: ["/", "/posts"],
+      routes: ["/", "/posts", "/posts/**"],
     },
   },
   ssr: true,
