@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-03-09",
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   app: {
-    baseURL: "/",
+    baseURL: "/whalerice/",
     buildAssetsDir: "assets",
     head: {
       charset: "utf-8",
@@ -20,6 +20,10 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: "github-pages",
+    prerender: {
+      crawlLinks: true,
+      routes: ["/", "/posts"],
+    },
   },
   ssr: true,
   experimental: {
