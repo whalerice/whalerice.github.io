@@ -9,13 +9,23 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
+      script: [
+        {
+          type: "module",
+          crossorigin: "anonymous",
+        },
+      ],
     },
   },
   nitro: {
     prerender: {
       routes: ["/"],
+      crawlLinks: true,
     },
     preset: "github-pages",
+    output: {
+      publicDir: "dist",
+    },
   },
   ssr: false,
   experimental: {
