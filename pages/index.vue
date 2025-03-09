@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold mb-8">나의 기술 블로그</h1>
+    <h1 class="text-2xl font-bold mb-8">나의 기술 블로그</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       <div class="md:col-span-1">
@@ -18,31 +18,64 @@
         <div v-else-if="filteredArticles.length === 0" class="text-center py-8">
           <p class="text-gray-600">검색 결과가 없습니다.</p>
         </div>
-        <div v-else class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div
-            v-for="article in filteredArticles"
-            :key="article._path"
-            class="bg-white p-6 rounded-lg shadow-md"
-          >
-            <h2 class="text-xl font-semibold mb-2">
-              <NuxtLink :to="article._path" class="hover:text-blue-600">
-                {{ article.title }}
-              </NuxtLink>
-            </h2>
-            <p class="text-gray-600 mb-4">{{ article.description }}</p>
-            <div class="flex flex-wrap gap-2 mb-3">
-              <span
-                v-for="tag in article.tags"
-                :key="tag"
-                class="px-2 py-1 bg-gray-100 text-sm rounded-full text-gray-600"
-              >
-                {{ tag }}
-              </span>
-            </div>
-            <div class="text-sm text-gray-500">
-              {{ new Date(article.date).toLocaleDateString() }}
-            </div>
+        <div v-else>
+          <div class="divide-y divide-gray-200">
+            <article
+              v-for="article in paginatedArticles"
+              :key="article._path"
+              class="py-6 group"
+            >
+              <div class="flex justify-between items-start">
+                <div class="flex-1">
+                  <h2
+                    class="text-xl font-semibold mb-2 group-hover:text-blue-600"
+                  >
+                    <NuxtLink :to="article._path" class="block">
+                      {{ article.title }}
+                    </NuxtLink>
+                  </h2>
+                  <p class="text-gray-600 text-sm mb-3">
+                    {{ article.description }}
+                  </p>
+                  <div class="flex items-center gap-4 text-sm text-gray-500">
+                    <time>
+                      {{
+                        new Date(article.date).toLocaleDateString("ko-KR", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })
+                      }}
+                    </time>
+                    <div class="flex gap-2">
+                      <span
+                        v-for="tag in article.tags"
+                        :key="tag"
+                        class="text-gray-600 hover:text-blue-600 cursor-pointer"
+                        @click.prevent="handleTagClick(tag)"
+                      >
+                        #{{ tag }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div v-if="article.thumbnail" class="ml-4 hidden sm:block">
+                  <img
+                    :src="article.thumbnail"
+                    :alt="article.title"
+                    class="w-24 h-24 object-cover rounded"
+                  />
+                </div>
+              </div>
+            </article>
           </div>
+
+          <Pagination
+            v-model="currentPage"
+            :total-pages="totalPages"
+            v-if="totalPages > 1"
+          />
         </div>
       </div>
     </div>
@@ -59,20 +92,11 @@ definePageMeta({
 const searchQuery = ref("");
 const selectedTags = ref([]);
 const allTags = ref([]);
+const currentPage = ref(1);
+const itemsPerPage = 5; // 10에서 5로 변경
 
-// 모든 문서 가져오기
-const { data: articles, pending } = await useAsyncData(
-  "articles",
-  () => {
-    return queryContent().sort({ date: -1 }).find();
-  },
-  {
-    transform: (articles) => {
-      console.log("Raw articles:", articles); // 디버깅용
-      return articles.filter((article) => article._type === "markdown");
-    },
-  }
-);
+// queryContent 대신 API 사용
+const { data: articles, pending } = await useFetch("/api/posts");
 
 // 검색 처리
 const handleSearch = (query) => {
@@ -114,4 +138,33 @@ const filteredArticles = computed(() => {
     return matchesSearch && matchesTags;
   });
 });
+
+// 전체 페이지 수 계산
+const totalPages = computed(() => {
+  return Math.ceil(filteredArticles.value.length / itemsPerPage);
+});
+
+// 현재 페이지에 표시할 항목들
+const paginatedArticles = computed(() => {
+  const start = (currentPage.value - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  return filteredArticles.value.slice(start, end);
+});
+
+// 검색이나 태그 필터링시 첫 페이지로 이동
+watch([searchQuery, selectedTags], () => {
+  currentPage.value = 1;
+});
+
+// 태그 클릭 핸들러 추가
+const handleTagClick = (tag) => {
+  selectedTags.value = [tag];
+};
 </script>
+
+<style>
+/* 호버 효과 */
+.group:hover {
+  @apply bg-gray-50;
+}
+</style>
