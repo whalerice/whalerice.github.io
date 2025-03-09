@@ -2,8 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"] # main 브랜치에 push할 때 실행
 
 jobs:
   build-and-deploy:
@@ -18,23 +17,18 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install Dependencies
+        run: npm install
 
       - name: Build
-        run: pnpm run generate
+        run: npm run generate
 
-      - name: Deploy to GitHub Pages
+      - name: Add .nojekyll file
+        run: touch .output/public/.nojekyll
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .output/public
-          # GitHub Pages에서 Jekyll 처리를 비활성화
-          enable_jekyll: false
-          # .nojekyll 파일 생성
-          publish_branch: gh-pages
+          force_orphan: true

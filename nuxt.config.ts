@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-03-09",
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   app: {
-    baseURL: "/whalerice.github.io/", // GitHub Pages의 저장소 이름으로 수정
+    baseURL: "/whalerice.github.io/", // 반드시 앞뒤 슬래시(/)를 포함해야 합니다
     buildAssetsDir: "assets",
     head: {
       charset: "utf-8",
