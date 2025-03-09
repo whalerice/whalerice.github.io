@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-03-09",
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   app: {
-    baseURL: "/whalerice.github.io/", // 반드시 앞뒤 슬래시(/)를 포함해야 합니다
+    baseURL: "/whalerice/",
     buildAssetsDir: "assets",
     head: {
       charset: "utf-8",
@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: "github-pages",
   },
-  ssr: false,
+  ssr: true,
   experimental: {
     payloadExtraction: false,
   },
