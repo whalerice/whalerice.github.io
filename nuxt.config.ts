@@ -9,6 +9,13 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
+      script: [
+        {
+          src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4298830590904900",
+          async: true,
+          crossorigin: "anonymous",
+        },
+      ],
     },
   },
   nitro: {
