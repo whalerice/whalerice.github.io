@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
+      meta: [
+        { name: "google-adsense-account", content: "ca-pub-4298830590904900" },
+      ],
       script: [
         {
           src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4298830590904900",
@@ -23,14 +26,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ["/"],
-    },
-    static: {
-      publicAssets: [
-        {
-          dir: "public",
-          maxAge: 60 * 60 * 24 * 365, // 1년
-        },
-      ],
     },
   },
   ssr: true,
