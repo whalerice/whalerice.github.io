@@ -21,7 +21,5 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
-  content: {
-    // content 설정...
-  },
+  content: {},
 });

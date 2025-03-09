@@ -4,6 +4,9 @@ import matter from "gray-matter";
 
 export default defineEventHandler(async (event) => {
   try {
+    if (!event.context.params || !event.context.params.slug) {
+      throw new Error("Slug parameter is missing");
+    }
     const slug = event.context.params.slug;
     const filePath = path.join(process.cwd(), "content", `${slug}.md`);
 
