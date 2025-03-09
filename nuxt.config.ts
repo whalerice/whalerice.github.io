@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     },
     preset: "github-pages",
     output: {
-      publicDir: "dist",
+      publicDir: ".output/public",
     },
   },
   ssr: false,

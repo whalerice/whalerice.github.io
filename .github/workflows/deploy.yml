@@ -29,11 +29,17 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Build
+        run: pnpm run build
+
       - name: Generate
         run: pnpm run generate
 
-      - name: Add .nojekyll
-        run: touch .output/public/.nojekyll
+      - name: Prepare deployment
+        run: |
+          mkdir -p .output/public
+          touch .output/public/.nojekyll
+          ls -la .output/public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
