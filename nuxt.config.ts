@@ -4,13 +4,21 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-03-09",
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   app: {
-    baseURL: "/", // 사용자 사이트는 루트 경로 사용
+    baseURL: "/whalerice.github.io/", // GitHub Pages의 저장소 이름으로 수정
     buildAssetsDir: "assets",
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+    },
   },
   nitro: {
     prerender: {
       routes: ["/"],
     },
     preset: "github-pages",
+  },
+  ssr: true,
+  experimental: {
+    payloadExtraction: false,
   },
 });
