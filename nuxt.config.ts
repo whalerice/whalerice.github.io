@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-03-09",
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   app: {
-    baseURL: "/whalerice/",
+    baseURL: "/",
     buildAssetsDir: "assets",
     head: {
       charset: "utf-8",
