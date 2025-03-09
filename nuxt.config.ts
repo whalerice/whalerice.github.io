@@ -17,8 +17,11 @@ export default defineNuxtConfig({
     },
     preset: "github-pages",
   },
-  ssr: true,
+  ssr: false,
   experimental: {
     payloadExtraction: false,
+  },
+  content: {
+    // content 설정...
   },
 });
