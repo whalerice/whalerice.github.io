@@ -75,9 +75,10 @@ const {
   error,
 } = await useFetch(`/api/posts/${route.params.slug}`, {
   // SSR을 위한 옵션 추가
-  key: route.params.slug,
+  key: `post-${route.params.slug}`,
   server: true,
-  cache: "no-cache",
+  cache: false,
+  watch: [route.params.slug],
 });
 
 // 마크다운을 HTML로 변환
