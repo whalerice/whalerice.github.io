@@ -73,7 +73,12 @@ const {
   data: post,
   pending,
   error,
-} = await useFetch(`/api/posts/${route.params.slug}`);
+} = await useFetch(`/api/posts/${route.params.slug}`, {
+  // SSR을 위한 옵션 추가
+  key: route.params.slug,
+  server: true,
+  cache: "no-cache",
+});
 
 // 마크다운을 HTML로 변환
 const renderedContent = computed(() => {
