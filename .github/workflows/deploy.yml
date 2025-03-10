@@ -26,6 +26,12 @@ jobs:
         with:
           version: 8
 
+      - name: Check content directory
+        run: |
+          ls -la
+          echo "Checking content directory..."
+          ls -la content || echo "Content directory not found"
+
       - name: Install Dependencies
         run: pnpm install
 
@@ -34,6 +40,13 @@ jobs:
 
       - name: Generate
         run: pnpm run generate
+
+      - name: Check output directory
+        run: |
+          echo "Checking output directory..."
+          ls -la .output/public
+          echo "Checking if content was copied..."
+          ls -la .output/public/content || echo "Content not in output"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

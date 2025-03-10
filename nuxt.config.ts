@@ -27,6 +27,9 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ["/"],
     },
+    public: {
+      content: "./content",
+    },
   },
   ssr: true,
   experimental: {

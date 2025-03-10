@@ -3,31 +3,30 @@ import path from "path";
 import matter from "gray-matter";
 
 export default defineEventHandler(async (event) => {
+  const slug = event.context.params?.slug;
+  if (!slug) {
+    throw createError({
+      statusCode: 400,
+      message: "Slug parameter is missing",
+    });
+  }
+  const postsDirectory = path.join(process.cwd(), "content");
+  const filePath = path.join(postsDirectory, `${slug}.md`);
+
   try {
-    if (!event.context.params || !event.context.params.slug) {
-      throw new Error("Slug parameter is missing");
-    }
-    const slug = event.context.params.slug;
-    const filePath = path.join(process.cwd(), "content", `${slug}.md`);
-
-    if (!fs.existsSync(filePath)) {
-      throw new Error("Post not found");
-    }
-
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(fileContents);
 
     return {
-      slug,
       ...data,
       content,
-      _path: `/posts/${slug}`,
+      slug,
     };
   } catch (error) {
-    console.error("Error reading post:", error);
+    console.error(`포스트 ${slug} 읽기 중 오류 발생:`, error);
     throw createError({
       statusCode: 404,
-      message: "Post not found",
+      message: "포스트를 찾을 수 없습니다.",
     });
   }
 });
