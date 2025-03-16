@@ -1,1 +1,0 @@
-{"id":"f0c7771b-8a4e-43f1-9cdc-20ceb6deed52","timestamp":1742124066051,"matcher":{"static":{"/api/content/content/database.sql":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":["/","/hello-world","/nuxt-create-project","/about"]}
