@@ -16,6 +16,10 @@ watch(width, (value) => {
 watch(route, (newVal) => {
   showLeftNav.value = false;
 });
+
+onMounted(() => {
+  isMobile.value = width < 768;
+});
 </script>
 <template>
   <article class="layout flex">
