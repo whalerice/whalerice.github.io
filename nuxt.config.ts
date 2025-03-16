@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   // GitHub Pages를 위한 설정
   app: {
-    baseURL: "/whalerice/", // 저장소 이름으로 설정
+    baseURL: "/", // 저장소 이름으로 설정
     buildAssetsDir: "assets", // _nuxt 대신 assets로 설정
     head: {
       script: [
