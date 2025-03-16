@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   // GitHub Pages를 위한 설정
   app: {
-    baseURL: "/", // 저장소 이름으로 설정
+    baseURL: process.env.NODE_ENV === "production" ? "/" : "/whalerice/", // 저장소 이름으로 설정
     buildAssetsDir: "assets", // _nuxt 대신 assets로 설정
     head: {
       script: [
@@ -50,6 +50,20 @@ export default defineNuxtConfig({
           src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4298830590904900",
           async: true,
           crossorigin: "anonymous",
+        },
+        // Google Analytics 스크립트 추가
+        {
+          src: "https://www.googletagmanager.com/gtag/js?id=G-TZ39L8X5FT", // 여기에 자신의 측정 ID를 넣으세요
+          async: true,
+        },
+        {
+          children: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TZ39L8X5FT'); // 측정 ID 교체
+          `,
+          type: "text/javascript",
         },
       ],
       meta: [
@@ -69,17 +83,6 @@ export default defineNuxtConfig({
             '@use "@/assets/scss/variables.scss" as *; @use "@/assets/scss/mixins.scss" as *;',
         },
       },
-    },
-    resolve: {
-      alias: {
-        "@": resolve(__dirname, "./"),
-        "~": resolve(__dirname, "./"),
-      },
-    },
-  },
-  nitro: {
-    routeRules: {
-      "/**": { cors: true },
     },
   },
 });
