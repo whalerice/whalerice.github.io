@@ -20,6 +20,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  width: 100%;
   .top {
     position: sticky;
     top: 0;
@@ -106,6 +107,7 @@
     border: 1px solid #dbdbdb;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    overflow-x: auto;
   }
   .language-text {
     background-color: #efefef;
