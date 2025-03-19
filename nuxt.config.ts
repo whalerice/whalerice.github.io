@@ -61,7 +61,7 @@ export default defineNuxtConfig({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-TZ39L8X5FT'); // 측정 ID 교체
+            gtag('config', 'G-TZ39L8X5FT');
           `,
           type: "text/javascript",
         },
