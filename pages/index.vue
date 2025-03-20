@@ -7,6 +7,7 @@ const { data, refresh } = await useAsyncData("posts", async () => {
   const [total, posts] = await Promise.all([
     queryCollection("content").count() || 0,
     queryCollection("content")
+      .order("date", "DESC")
       .skip((currentPage.value - 1) * limit)
       .limit(limit)
       .all() || [],
