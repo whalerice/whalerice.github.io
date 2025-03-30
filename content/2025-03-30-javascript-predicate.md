@@ -2,7 +2,7 @@
 title: "자바스크립트 Predicate 이해하기"
 date: "2025-03-30"
 description: "자바스크립트에서 Predicate의 개념과 활용 방법에 대해 알아봅니다."
-tags: ["자바스크립트"]
+tags: ["JavaScript"]
 ---
 
 # 자바스크립트 Predicate 이해하기

@@ -2,7 +2,7 @@
 title: "오버로딩(Overloading)"
 date: "2025-03-19"
 description: "오버로딩은 함수가 여러개의 call signatures(콜시그니처)를 가지고 있을때 발생시킴"
-tags: ["타입스크립트"]
+tags: ["TypeScript"]
 ---
 
 오버로딩은 함수가 여러개의 call signatures(콜시그니처)를 가지고 있을 때 발생시킵니다. 이는 같은 함수 이름으로 다른 매개변수 타입이나 개수를 가진 여러 버전의 함수를 정의할 수 있게 해줍니다.

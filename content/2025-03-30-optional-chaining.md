@@ -2,7 +2,7 @@
 title: "Optional Chaining (옵셔널 체이닝)"
 date: "2025-03-30"
 description: "자바스크립트의 Optional Chaining 연산자(?.)에 대해 알아보고 실제 사용 예시를 살펴봅니다."
-tags: ["자바스크립트"]
+tags: ["JavaScript"]
 ---
 
 # Optional Chaining (옵셔널 체이닝)

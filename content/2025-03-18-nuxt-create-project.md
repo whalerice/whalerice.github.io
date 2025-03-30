@@ -3,7 +3,7 @@ title: "Nuxt3 프로젝트 셋팅"
 date: "2025-03-16"
 description: "Nuxt 프로젝트 초기 세팅에 대한 기록입니다."
 image: "https://blog.kakaocdn.net/dn/DDDqK/btrRhV01c3Q/3ydgjy9yeDj8Jx5W5YzGk0/img.png"
-tags: ["Nuxt3", "프론트엔드"]
+tags: ["Nuxt3"]
 ---
 
 ![A Cool Image](https://blog.kakaocdn.net/dn/DDDqK/btrRhV01c3Q/3ydgjy9yeDj8Jx5W5YzGk0/img.png)

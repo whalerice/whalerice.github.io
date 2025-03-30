@@ -2,7 +2,7 @@
 title: "Classes & Interfaces"
 date: "2025-03-20"
 description: "타입스크립트의 클래스와 인터페이스에 대한 상세 설명"
-tags: ["타입스크립트"]
+tags: ["TypeScript"]
 ---
 
 ## Classes (클래스)

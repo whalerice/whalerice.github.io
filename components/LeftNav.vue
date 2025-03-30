@@ -1,6 +1,26 @@
 <script setup lang="ts">
 const route = useRoute();
 const currentPath = computed(() => route.path);
+
+// 태그 목록을 가져오는 함수
+const getTags = async () => {
+  const files = await queryCollection("content").all();
+  const tags = new Set<string>();
+
+  files.forEach((file) => {
+    if (file.tags) {
+      (file.tags as string[]).forEach((tag) => tags.add(tag));
+    }
+  });
+
+  return Array.from(tags).sort();
+};
+
+const tags = ref<string[]>([]);
+
+onMounted(async () => {
+  tags.value = await getTags();
+});
 </script>
 <template>
   <div class="left-nav">
@@ -27,6 +47,22 @@ const currentPath = computed(() => route.path);
         <USeparator />
       </li> -->
     </ul>
+
+    <h4 class="text-sm font-bold mt-8 mb-4">태그</h4>
+    <div>
+      <UBadge
+        v-for="tag in tags"
+        :key="tag"
+        color="neutral"
+        variant="outline"
+        class="rounded-full m-1 text-xs text-gray-500"
+      >
+        {{ tag }}
+      </UBadge>
+    </div>
+
+    <!-- :to="`/tags/${tag}`"
+    :class="{ active: currentPath === `/tags/${tag}` }" -->
     <div class="mt-auto">
       <!-- <NuxtLink
         to="/privacy-policy"
