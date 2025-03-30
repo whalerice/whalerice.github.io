@@ -41,6 +41,6 @@ onMounted(() => {
       src="/img/261574805-5af726c5-0113-4676-9ee9-c464393caee0.png"
       alt="logo"
     /> -->
-    <CookieConsent />
+    <!-- <CookieConsent /> -->
   </article>
 </template>
