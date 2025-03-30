@@ -1,1 +1,0 @@
-{"id":"42ea752a-3885-440c-8d29-d84b14b0b115","timestamp":1742469449472,"matcher":{"static":{"/api/content/content/database.sql":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":["/","/privacy-policy","/hello-world","/about","/2025-03-19-password-validation","/2025-03-19-overloading","/2025-03-20-classes-interfaces","/2025-03-20-polymorphism"]}
