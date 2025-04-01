@@ -5,8 +5,6 @@ description: "자바스크립트의 Optional Chaining 연산자(?.)에 대해 �
 tags: ["JavaScript"]
 ---
 
-# Optional Chaining (옵셔널 체이닝)
-
 Optional Chaining은 자바스크립트 ES2020에서 도입된 기능으로, 객체의 속성에 안전하게 접근할 수 있게 해주는 연산자입니다. `?.` 연산자를 사용하여 구현됩니다.
 
 ## 왜 Optional Chaining이 필요한가?

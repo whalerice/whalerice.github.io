@@ -5,8 +5,6 @@ description: "자바스크립트에서 Predicate의 개념과 활용 방법에 �
 tags: ["JavaScript"]
 ---
 
-# 자바스크립트 Predicate 이해하기
-
 Predicate는 프로그래밍에서 참(true) 또는 거짓(false)을 반환하는 함수를 의미합니다. 자바스크립트에서 Predicate는 배열 메서드나 조건문에서 자주 사용되는 중요한 개념입니다.
 
 ## Predicate의 기본 개념

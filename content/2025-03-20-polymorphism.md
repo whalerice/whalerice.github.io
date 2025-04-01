@@ -30,7 +30,7 @@ TypeScript에서 다형성은 다음과 같은 형태로 구현됩니다:
 
 ### 기본적인 제네릭 사용 예시
 
-```ts
+```typescript
 // 함수 오버로딩 방식
 type SuperPrint = {
   <TypePlaceHolder>(arr: TypePlaceHolder[]): TypePlaceHolder;
@@ -53,7 +53,7 @@ const d = superPrint([1, 2, true, false, "hello"]); // (number | boolean | strin
 
 ### 복수의 제네릭 타입
 
-```ts
+```typescript
 type SuperPrint = {
   <T, M>(arr: T[], x: M): T;
 };
@@ -68,7 +68,7 @@ let a = superPrint([1, "b", true], "hi"); // T: number | string | boolean, M: st
 
 ### 실제 활용 예시
 
-```ts
+```typescript
 // 제네릭 함수 정의
 function superPrint<T>(a: T[]) {
   return a[0];

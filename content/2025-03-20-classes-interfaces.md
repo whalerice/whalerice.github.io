@@ -11,7 +11,7 @@ tags: ["TypeScript"]
 
 추상 클래스는 다른 클래스가 상속받을 수 있는 기본 클래스이지만, 직접 인스턴스를 생성할 수 없습니다.
 
-```ts
+```typescript
 abstract class User {
   constructor(
     private firstName: string,
@@ -51,7 +51,7 @@ const test = new User("nico", "las", "니꼬"); // 에러 발생
    - 어디서든 접근 가능
    - 기본값
 
-```ts
+```typescript
 abstract class User {
   constructor(
     private firstName: string, // private: 외부 접근 불가
@@ -69,7 +69,7 @@ abstract class User {
 
 `readonly` 키워드를 사용하면 프로퍼티의 값을 한 번 설정한 후 변경할 수 없습니다.
 
-```ts
+```typescript
 class Word {
   constructor(public readonly term: string, public readonly def: string) {}
 }
@@ -84,7 +84,7 @@ kimchi.def = "xxxx"; // 에러 발생: readonly 프로퍼티는 변경할 수 �
 
 ### 인터페이스 구현 예시
 
-```ts
+```typescript
 interface User {
   firstName: string;
   lastName: string;
@@ -128,7 +128,7 @@ class Player implements User, Human {
 
 ### 컴파일된 JavaScript 코드
 
-```js
+```javascript
 "use strict";
 class Player {
   constructor(firstName, lastName, health) {

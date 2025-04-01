@@ -9,7 +9,7 @@ tags: ["TypeScript"]
 
 ## 1. 매개변수 타입이 다른 경우의 오버로딩
 
-```ts
+```typescript
 type Add = {
   (a: number, b: number): number;
   (a: number, b: string): number;
@@ -25,7 +25,7 @@ const add: Add = (a, b) => {
 
 ## 2. 매개변수 개수가 다른 경우의 오버로딩
 
-```ts
+```typescript
 type Add = {
   (a: number, b: number): number;
   (a: number, b: number, c: number): number;
@@ -41,7 +41,7 @@ const add: Add = (a, b, c?: number) => {
 
 ## 3. 객체 타입을 사용한 오버로딩
 
-```ts
+```typescript
 type Config = {
   path: string;
   state: object;

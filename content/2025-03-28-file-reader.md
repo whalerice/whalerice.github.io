@@ -5,8 +5,6 @@ description: "FileReader API를 JavaScript와 TypeScript에서 사용하는 방�
 tags: ["JavaScript", "TypeScript", "Nuxt.js", "FileReader"]
 ---
 
-# FileReader 사용법: JavaScript와 TypeScript에서의 구현
-
 FileReader는 웹 브라우저에서 파일을 읽을 수 있게 해주는 Web API입니다. 이 글에서는 JavaScript와 TypeScript에서 FileReader를 사용하는 방법과 Nuxt.js에서의 구현 예시를 살펴보겠습니다.
 
 ## JavaScript에서 FileReader 사용하기

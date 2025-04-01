@@ -1,9 +1,43 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui";
 
-@font-face {
+/* @font-face {
   font-family: "S-CoreDream-3Light";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "MaruBuri";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2)
+      format("woff2"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "MaruBuriBold";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2)
+      format("woff2"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "D2Coding";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/D2Coding.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -11,12 +45,16 @@
 
 @theme {
   /* --font-sans: "Public Sans", sans-serif; */
-  --font-sans: "S-CoreDream-3Light", sans-serif;
-  --ui-color-primary-500: #b9e2e3;
-  --ui-color-primary-400: #7cd3d5;
+  --font-sans: "MaruBuri", sans-serif;
+  /* --ui-color-primary-500: #b9e2e3; */
+  /* --ui-color-primary-400: #7cd3d5; */
+  --font-mono: "D2Coding", monospace;
+  --ring-font-mono: "D2Coding", "MaruBuri", monospace, sans-serif;
 }
 
 :root {
+  --ui-color-primary-400: #7cd3d5;
+  --ui-color-primary-500: #b9e2e3;
   --ui-primary: var(--ui-color-primary-400);
   /* --ui-secondary: var(--ui-color-secondary-500);
   --ui-success: var(--ui-color-success-500);
@@ -32,4 +70,8 @@
   --ui-info: var(--ui-color-info-400);
   --ui-warning: var(--ui-color-warning-400);
   --ui-error: var(--ui-color-error-400); */
+}
+
+.ring {
+  font-family: var(--ring-font-mono);
 }

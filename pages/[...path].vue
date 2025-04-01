@@ -21,8 +21,8 @@ useSeoMeta(data.value?.seo || {});
         >
       </div>
       <div class="mb-10">
-        <h1 class="text-2xl font-bold mb-2">{{ data.title }}</h1>
-        <h3 class="text-sm text-gray-500">
+        <h1 class="text-3xl font-bold mb-2">{{ data.title }}</h1>
+        <h3 class="text-md text-gray-500">
           {{ dayjs(data.date).format("YYYY-MM-DD") }}
         </h3>
       </div>

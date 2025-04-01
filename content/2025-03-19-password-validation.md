@@ -5,8 +5,6 @@ description: "다양한 비밀번호 유효성 검사 정규식과 예제 코드
 tags: ["JavaScript", "정규식", "보안"]
 ---
 
-# 비밀번호 유효성 검사 가이드
-
 웹 애플리케이션에서 비밀번호 유효성 검사는 보안의 기본적인 요소입니다.
 다음은 다양한 비밀번호 정책에 따른 유효성 검사 예제 코드입니다.
 
@@ -14,7 +12,7 @@ tags: ["JavaScript", "정규식", "보안"]
 
 `영문(대소문자) 포함 / 숫자 포함 / 특수 문자 포함 / 공백 X / 비밀번호 자리 8~20자`
 
-```js
+```javascript
 function chkPW() {
   var pw = $("#password").val();
   var num = pw.search(/[0-9]/g);
@@ -41,7 +39,7 @@ function chkPW() {
 
 `영문,숫자,특수문자 중 2가지 혼합 (영문,숫자 = 통과) (특문,숫자 = 통과) / 비밀번호 10~20자리`
 
-```js
+```javascript
 function chkPW() {
   var pw = $("#password").val();
   var num = pw.search(/[0-9]/g);
@@ -72,7 +70,7 @@ function chkPW() {
 
 `비밀번호 8자리 이상 / 숫자 포함 / 영대 문자 포함 / 영소 문자 포함 / 특수문자 포함`
 
-```js
+```javascript
 function chkPW() {
   var reg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
   var pw = $("#password").val();
@@ -93,7 +91,7 @@ function chkPW() {
 
 `특수문자+영문+숫자 혼합 / 같은 문자 4번 반복 X / 아이디 포함 X`
 
-```js
+```javascript
 function chkPW() {
   var pw = $("#password").val();
   var id = $("#id").val();
@@ -123,7 +121,7 @@ function chkPW() {
 
 `비밀번호 8자리 이상 / 숫자 포함 / 영대 문자 포함 / 영소 문자 포함 / 특수문자 포함 / 공백 X / 같은 문자 4번 반복 X / 아이디 포함 X / 한글 X`
 
-```js
+```javascript
 function chkPW() {
   var pw = $("#password").val();
   var id = $("#id").val();
