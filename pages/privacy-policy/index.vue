@@ -95,7 +95,7 @@ useSeoMeta({
           <ul>
             <li>성명: 고래밥양념</li>
             <li>직책: 관리자</li>
-            <li>연락처: [이메일 주소]</li>
+            <li>연락처: joyfulforest@gmail.com</li>
           </ul>
         </li>
       </ul>
@@ -221,7 +221,7 @@ useSeoMeta({
           <ul>
             <li>성명: 고래밥양념</li>
             <li>직책: 관리자</li>
-            <li>연락처: [이메일 주소]</li>
+            <li>연락처: joyfulforest@gmail.com</li>
           </ul>
         </li>
       </ul>

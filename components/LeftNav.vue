@@ -64,13 +64,13 @@ onMounted(async () => {
     <!-- :to="`/tags/${tag}`"
     :class="{ active: currentPath === `/tags/${tag}` }" -->
     <div class="mt-auto">
-      <!-- <NuxtLink
+      <NuxtLink
         to="/privacy-policy"
         class="text-xs text-gray-500 hover:text-gray-700 flex items-center"
       >
         <Icon name="i-lucide-shield-check" class="size-3 mr-1" />
         <span>개인정보처리방침</span>
-      </NuxtLink> -->
+      </NuxtLink>
     </div>
   </div>
 </template>
