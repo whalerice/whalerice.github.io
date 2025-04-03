@@ -1,0 +1,218 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style id="nuxt-ui-colors">@layer base {
+  :root {
+  --ui-color-primary-50: var(--color-emerald-50, oklch(97.9% 0.021 166.113));
+  --ui-color-primary-100: var(--color-emerald-100, oklch(95% 0.052 163.051));
+  --ui-color-primary-200: var(--color-emerald-200, oklch(90.5% 0.093 164.15));
+  --ui-color-primary-300: var(--color-emerald-300, oklch(84.5% 0.143 164.978));
+  --ui-color-primary-400: var(--color-emerald-400, oklch(76.5% 0.177 163.223));
+  --ui-color-primary-500: var(--color-emerald-500, oklch(69.6% 0.17 162.48));
+  --ui-color-primary-600: var(--color-emerald-600, oklch(59.6% 0.145 163.225));
+  --ui-color-primary-700: var(--color-emerald-700, oklch(50.8% 0.118 165.612));
+  --ui-color-primary-800: var(--color-emerald-800, oklch(43.2% 0.095 166.913));
+  --ui-color-primary-900: var(--color-emerald-900, oklch(37.8% 0.077 168.94));
+  --ui-color-primary-950: var(--color-emerald-950, oklch(26.2% 0.051 172.552));
+  --ui-color-secondary-50: var(--color-blue-50, oklch(97% 0.014 254.604));
+  --ui-color-secondary-100: var(--color-blue-100, oklch(93.2% 0.032 255.585));
+  --ui-color-secondary-200: var(--color-blue-200, oklch(88.2% 0.059 254.128));
+  --ui-color-secondary-300: var(--color-blue-300, oklch(80.9% 0.105 251.813));
+  --ui-color-secondary-400: var(--color-blue-400, oklch(70.7% 0.165 254.624));
+  --ui-color-secondary-500: var(--color-blue-500, oklch(62.3% 0.214 259.815));
+  --ui-color-secondary-600: var(--color-blue-600, oklch(54.6% 0.245 262.881));
+  --ui-color-secondary-700: var(--color-blue-700, oklch(48.8% 0.243 264.376));
+  --ui-color-secondary-800: var(--color-blue-800, oklch(42.4% 0.199 265.638));
+  --ui-color-secondary-900: var(--color-blue-900, oklch(37.9% 0.146 265.522));
+  --ui-color-secondary-950: var(--color-blue-950, oklch(28.2% 0.091 267.935));
+  --ui-color-success-50: var(--color-green-50, oklch(98.2% 0.018 155.826));
+  --ui-color-success-100: var(--color-green-100, oklch(96.2% 0.044 156.743));
+  --ui-color-success-200: var(--color-green-200, oklch(92.5% 0.084 155.995));
+  --ui-color-success-300: var(--color-green-300, oklch(87.1% 0.15 154.449));
+  --ui-color-success-400: var(--color-green-400, oklch(79.2% 0.209 151.711));
+  --ui-color-success-500: var(--color-green-500, oklch(72.3% 0.219 149.579));
+  --ui-color-success-600: var(--color-green-600, oklch(62.7% 0.194 149.214));
+  --ui-color-success-700: var(--color-green-700, oklch(52.7% 0.154 150.069));
+  --ui-color-success-800: var(--color-green-800, oklch(44.8% 0.119 151.328));
+  --ui-color-success-900: var(--color-green-900, oklch(39.3% 0.095 152.535));
+  --ui-color-success-950: var(--color-green-950, oklch(26.6% 0.065 152.934));
+  --ui-color-info-50: var(--color-blue-50, oklch(97% 0.014 254.604));
+  --ui-color-info-100: var(--color-blue-100, oklch(93.2% 0.032 255.585));
+  --ui-color-info-200: var(--color-blue-200, oklch(88.2% 0.059 254.128));
+  --ui-color-info-300: var(--color-blue-300, oklch(80.9% 0.105 251.813));
+  --ui-color-info-400: var(--color-blue-400, oklch(70.7% 0.165 254.624));
+  --ui-color-info-500: var(--color-blue-500, oklch(62.3% 0.214 259.815));
+  --ui-color-info-600: var(--color-blue-600, oklch(54.6% 0.245 262.881));
+  --ui-color-info-700: var(--color-blue-700, oklch(48.8% 0.243 264.376));
+  --ui-color-info-800: var(--color-blue-800, oklch(42.4% 0.199 265.638));
+  --ui-color-info-900: var(--color-blue-900, oklch(37.9% 0.146 265.522));
+  --ui-color-info-950: var(--color-blue-950, oklch(28.2% 0.091 267.935));
+  --ui-color-warning-50: var(--color-yellow-50, oklch(98.7% 0.026 102.212));
+  --ui-color-warning-100: var(--color-yellow-100, oklch(97.3% 0.071 103.193));
+  --ui-color-warning-200: var(--color-yellow-200, oklch(94.5% 0.129 101.54));
+  --ui-color-warning-300: var(--color-yellow-300, oklch(90.5% 0.182 98.111));
+  --ui-color-warning-400: var(--color-yellow-400, oklch(85.2% 0.199 91.936));
+  --ui-color-warning-500: var(--color-yellow-500, oklch(79.5% 0.184 86.047));
+  --ui-color-warning-600: var(--color-yellow-600, oklch(68.1% 0.162 75.834));
+  --ui-color-warning-700: var(--color-yellow-700, oklch(55.4% 0.135 66.442));
+  --ui-color-warning-800: var(--color-yellow-800, oklch(47.6% 0.114 61.907));
+  --ui-color-warning-900: var(--color-yellow-900, oklch(42.1% 0.095 57.708));
+  --ui-color-warning-950: var(--color-yellow-950, oklch(28.6% 0.066 53.813));
+  --ui-color-error-50: var(--color-red-50, oklch(97.1% 0.013 17.38));
+  --ui-color-error-100: var(--color-red-100, oklch(93.6% 0.032 17.717));
+  --ui-color-error-200: var(--color-red-200, oklch(88.5% 0.062 18.334));
+  --ui-color-error-300: var(--color-red-300, oklch(80.8% 0.114 19.571));
+  --ui-color-error-400: var(--color-red-400, oklch(70.4% 0.191 22.216));
+  --ui-color-error-500: var(--color-red-500, oklch(63.7% 0.237 25.331));
+  --ui-color-error-600: var(--color-red-600, oklch(57.7% 0.245 27.325));
+  --ui-color-error-700: var(--color-red-700, oklch(50.5% 0.213 27.518));
+  --ui-color-error-800: var(--color-red-800, oklch(44.4% 0.177 26.899));
+  --ui-color-error-900: var(--color-red-900, oklch(39.6% 0.141 25.723));
+  --ui-color-error-950: var(--color-red-950, oklch(25.8% 0.092 26.042));
+  --ui-color-neutral-50: var(--color-slate-50, oklch(98.4% 0.003 247.858));
+  --ui-color-neutral-100: var(--color-slate-100, oklch(96.8% 0.007 247.896));
+  --ui-color-neutral-200: var(--color-slate-200, oklch(92.9% 0.013 255.508));
+  --ui-color-neutral-300: var(--color-slate-300, oklch(86.9% 0.022 252.894));
+  --ui-color-neutral-400: var(--color-slate-400, oklch(70.4% 0.04 256.788));
+  --ui-color-neutral-500: var(--color-slate-500, oklch(55.4% 0.046 257.417));
+  --ui-color-neutral-600: var(--color-slate-600, oklch(44.6% 0.043 257.281));
+  --ui-color-neutral-700: var(--color-slate-700, oklch(37.2% 0.044 257.287));
+  --ui-color-neutral-800: var(--color-slate-800, oklch(27.9% 0.041 260.031));
+  --ui-color-neutral-900: var(--color-slate-900, oklch(20.8% 0.042 265.755));
+  --ui-color-neutral-950: var(--color-slate-950, oklch(12.9% 0.042 264.695));
+  }
+  :root, .light {
+  --ui-primary: var(--ui-color-primary-500);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-success: var(--ui-color-success-500);
+  --ui-info: var(--ui-color-info-500);
+  --ui-warning: var(--ui-color-warning-500);
+  --ui-error: var(--ui-color-error-500);
+  }
+  .dark {
+  --ui-primary: var(--ui-color-primary-400);
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-success: var(--ui-color-success-400);
+  --ui-info: var(--ui-color-info-400);
+  --ui-warning: var(--ui-color-warning-400);
+  --ui-error: var(--ui-color-error-400);
+  }
+}</style><title>자바스크립트 Map 자료형: 키-값 쌍의 효율적인 관리</title><script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4298830590904900" async crossorigin="anonymous"></script><script src="https://www.googletagmanager.com/gtag/js?id=G-TZ39L8X5FT" async></script><style>pre code .line{display:block}</style><link rel="stylesheet" href="/assets/entry.CCrROUvM.css" crossorigin><style>@layer components {:where(.i-lucide\:align-justify){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12h18M3 18h18M3 6h18'/%3E%3C/svg%3E")}:where(.i-lucide\:arrow-left){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m12 19l-7-7l7-7m7 7H5'/%3E%3C/svg%3E")}:where(.i-lucide\:github){display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask-image:var(--svg);mask-image:var(--svg);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%;--svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Cpath d='M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5c.08-1.25-.27-2.48-1-3.5c.28-1.15.28-2.35 0-3.5c0 0-1 0-3 1.5c-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5c-.39.49-.68 1.05-.85 1.65S8.93 17.38 9 18v4'/%3E%3Cpath d='M9 18c-4.51 2-5-2-7-2'/%3E%3C/g%3E%3C/svg%3E")}}</style><link rel="preload" as="fetch" crossorigin="anonymous" href="/2025-04-03-data-type-map/_payload.json?57fb928f-8bf9-406a-960d-4e1075c3cef9"><link rel="modulepreload" as="script" crossorigin href="/assets/cB3aqb4q.js"><link rel="modulepreload" as="script" crossorigin href="/assets/B515S-nC.js"><link rel="modulepreload" as="script" crossorigin href="/assets/CYhzQzZF.js"><link rel="modulepreload" as="script" crossorigin href="/assets/BqxLzyAt.js"><link rel="modulepreload" as="script" crossorigin href="/assets/BCftcP4I.js"><link rel="modulepreload" as="script" crossorigin href="/assets/CVBJt2yn.js"><link rel="modulepreload" as="script" crossorigin href="/assets/rIKW1XRN.js"><link rel="modulepreload" as="script" crossorigin href="/assets/CiO_lle4.js"><link rel="modulepreload" as="script" crossorigin href="/assets/DRDBYfVI.js"><link rel="modulepreload" as="script" crossorigin href="/assets/Bk7etTci.js"><link rel="modulepreload" as="script" crossorigin href="/assets/BYBbPVxL.js"><link rel="modulepreload" as="script" crossorigin href="/assets/CzaCs5Fl.js"><link rel="modulepreload" as="script" crossorigin href="/assets/CL0tYgGN.js"><link rel="modulepreload" as="script" crossorigin href="/assets/CxLOMXdD.js"><link rel="modulepreload" as="script" crossorigin href="/assets/DbOWNQxD.js"><link rel="modulepreload" as="script" crossorigin href="/assets/COdmrXTq.js"><link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/assets/builds/meta/57fb928f-8bf9-406a-960d-4e1075c3cef9.json"><link rel="prefetch" as="script" crossorigin href="/assets/CFiDZ00U.js"><link rel="prefetch" as="script" crossorigin href="/assets/CAGCKEYH.js"><meta name="google-adsense-account" content="ca-pub-4298830590904900"><script type="text/javascript">
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TZ39L8X5FT');
+          </script><meta name="description" content="자바스크립트의 Map 자료형에 대해 알아보고, 실제 사용 예시를 통해 이해해봅시다."><script type="module" src="/assets/cB3aqb4q.js" crossorigin></script><script>"use strict";(()=>{const t=window,e=document.documentElement,c=["dark","light"],n=getStorageValue("localStorage","nuxt-color-mode")||"system";let i=n==="system"?u():n;const r=e.getAttribute("data-color-mode-forced");r&&(i=r),l(i),t["__NUXT_COLOR_MODE__"]={preference:n,value:i,getColorScheme:u,addColorScheme:l,removeColorScheme:d};function l(o){const s=""+o+"",a="";e.classList?e.classList.add(s):e.className+=" "+s,a&&e.setAttribute("data-"+a,o)}function d(o){const s=""+o+"",a="";e.classList?e.classList.remove(s):e.className=e.className.replace(new RegExp(s,"g"),""),a&&e.removeAttribute("data-"+a)}function f(o){return t.matchMedia("(prefers-color-scheme"+o+")")}function u(){if(t.matchMedia&&f("").media!=="not all"){for(const o of c)if(f(":"+o).matches)return o}return"light"}})();function getStorageValue(t,e){switch(t){case"localStorage":return window.localStorage.getItem(e);case"sessionStorage":return window.sessionStorage.getItem(e);case"cookie":return getCookie(e);default:return null}}function getCookie(t){const c=("; "+window.document.cookie).split("; "+t+"=");if(c.length===2)return c.pop()?.split(";").shift()}</script></head><body><div id="__nuxt" class="isolate"><!--[--><!--[--><!--[--><!--[--><!--[--><article class="layout flex"><!----><section class="main flex-auto"><section class="top"><header class="header flex items-center justify-between"><!--[--><!--[--><!--[--><!--[--><button type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="rounded-[calc(var(--ui-radius)*1.5)] font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors text-base gap-2 text-(--ui-bg) bg-(--ui-primary) hover:bg-(--ui-primary)/75 disabled:bg-(--ui-primary) aria-disabled:bg-(--ui-primary) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--ui-primary) p-2"><!--[--><!--[--><span class="iconify i-lucide:align-justify shrink-0 size-6" aria-hidden="true" style=""></span><!--]--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></button><!--]--><!--]--><!----><!--]--><!--]--><div><!--[--><!--[--><a href="https://github.com/whalerice" rel="noopener noreferrer" target="_blank" class="rounded-[calc(var(--ui-radius)*1.5)] font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors text-base gap-2 ring ring-inset ring-(--ui-border-accented) text-(--ui-text) bg-(--ui-bg) hover:bg-(--ui-bg-elevated) disabled:bg-(--ui-bg) aria-disabled:bg-(--ui-bg) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--ui-border-inverted) p-2"><!--[--><!--[--><span class="iconify i-lucide:github shrink-0 size-6" aria-hidden="true" style=""></span><!--]--><!--[--><!----><!--]--><!--[--><!----><!--]--><!--]--></a><!--]--><!--]--></div></header></section><section class="content"><!--[--><div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8"><!--[--><!--[--><div class="mb-10"><!--[--><!--[--><button type="button" class="rounded-[calc(var(--ui-radius)*1.5)] font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors px-3 py-2 text-sm gap-2 ring ring-inset ring-(--ui-border-accented) text-(--ui-text) bg-(--ui-bg) hover:bg-(--ui-bg-elevated) disabled:bg-(--ui-bg) aria-disabled:bg-(--ui-bg) focus:outline-none focus-visible:ring-2 focus-visible:ring-(--ui-border-inverted)"><!--[--><!--[--><span class="iconify i-lucide:arrow-left shrink-0 size-5" aria-hidden="true" style=""></span><!--]--><!--[-->뒤로가기<!--]--><!--[--><!----><!--]--><!--]--></button><!--]--><!--]--></div><div class="mb-10"><h1 class="text-3xl font-bold mb-2">자바스크립트 Map 자료형: 키-값 쌍의 효율적인 관리</h1><h3 class="text-md text-gray-500">2025-04-03</h3></div><div class="prose"><p><!--[-->자바스크립트의 특별한 자료형인 <code><!--[-->Map<!--]--></code>에 대해 이야기해보려고 합니다.<br>
+Map은 키-값 쌍을 효율적으로 관리할 수 있는 자료구조입니다.<!--]--></p><p><!--[--><br><br><!--]--></p><h2 id="map이란-무엇인가요"><a href="#map이란-무엇인가요"><!--[-->Map이란 무엇인가요?<!--]--></a></h2><p><!--[-->Map은 ES6(ECMAScript 2015)에서 도입된 새로운 자료구조로, 키-값 쌍을 저장하고 관리할 수 있게 해줍니다.<br>
+일반 객체와 비슷해 보이지만, Map은 다음과 같은 특징이 있습니다:<!--]--></p><ul><!--[--><li><!--[-->키로 어떤 타입이든 사용 가능 (객체는 문자열이나 심볼만 가능)<!--]--></li><li><!--[-->삽입 순서가 보장됨<!--]--></li><li><!--[-->크기를 쉽게 알 수 있음<!--]--></li><li><!--[-->반복이 용이함<!--]--></li><!--]--></ul><p><!--[--><br><br><!--]--></p><h2 id="map-생성하기"><a href="#map-생성하기"><!--[-->Map 생성하기<!--]--></a></h2><p><!--[-->Map을 만드는 방법은 매우 간단합니다:<!--]--></p><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="si6LB">// 빈 Map 생성
+</span></span><span class="line" line="2"><span class="sRedq">const</span><span class="sddWA"> emptyMap </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">();
+</span></span><span class="line" line="3"><span emptylineplaceholder="true">
+</span></span><span class="line" line="4"><span class="si6LB">// 배열로부터 Map 생성
+</span></span><span class="line" line="5"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">([
+</span></span><span class="line" line="6"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">key1</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">value1</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="7"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">key2</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">value2</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="8"><span class="sddWA">  [</span><span class="sjKgF">1</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">number key</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="9"><span class="sddWA">  [{}, </span><span class="syA0A">&quot;</span><span class="shai9">object key</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="10"><span class="sddWA">]);
+</span></span></code><!--]--></pre><h2 id="map의-주요-메서드들"><a href="#map의-주요-메서드들"><!--[-->Map의 주요 메서드들<!--]--></a></h2><h3 id="_1-값-추가하기-set"><a href="#_1-값-추가하기-set"><!--[-->1. 값 추가하기 (set)<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">();
+</span></span><span class="line" line="2"><span class="sddWA">map.</span><span class="s57r0">set</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">홍길동</span><span class="syA0A">&quot;</span><span class="sddWA">);
+</span></span><span class="line" line="3"><span class="sddWA">map.</span><span class="s57r0">set</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="sjKgF">25</span><span class="sddWA">);
+</span></span><span class="line" line="4"><span class="sddWA">map.</span><span class="s57r0">set</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">city</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">서울</span><span class="syA0A">&quot;</span><span class="sddWA">);
+</span></span></code><!--]--></pre><h3 id="_2-값-가져오기-get"><a href="#_2-값-가져오기-get"><!--[-->2. 값 가져오기 (get)<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">([
+</span></span><span class="line" line="2"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">홍길동</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="3"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="sjKgF">25</span><span class="sddWA">],
+</span></span><span class="line" line="4"><span class="sddWA">]);
+</span></span><span class="line" line="5"><span class="sddWA">console.</span><span class="s57r0">log</span><span class="sddWA">(map.</span><span class="s57r0">get</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">)); </span><span class="si6LB">// &#39;홍길동&#39;
+</span></span><span class="line" line="6"><span class="sddWA">console.</span><span class="s57r0">log</span><span class="sddWA">(map.</span><span class="s57r0">get</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">)); </span><span class="si6LB">// 25
+</span></span></code><!--]--></pre><h3 id="_3-값-삭제하기-delete"><a href="#_3-값-삭제하기-delete"><!--[-->3. 값 삭제하기 (delete)<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">([
+</span></span><span class="line" line="2"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">홍길동</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="3"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="sjKgF">25</span><span class="sddWA">],
+</span></span><span class="line" line="4"><span class="sddWA">]);
+</span></span><span class="line" line="5"><span class="sddWA">map.</span><span class="s57r0">delete</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">); </span><span class="si6LB">// true 반환
+</span></span><span class="line" line="6"><span class="sddWA">console.</span><span class="s57r0">log</span><span class="sddWA">(map); </span><span class="si6LB">// Map(1) { &#39;name&#39; =&gt; &#39;홍길동&#39; }
+</span></span></code><!--]--></pre><h3 id="_4-키-존재-확인하기-has"><a href="#_4-키-존재-확인하기-has"><!--[-->4. 키 존재 확인하기 (has)<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">([
+</span></span><span class="line" line="2"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">홍길동</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="3"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="sjKgF">25</span><span class="sddWA">],
+</span></span><span class="line" line="4"><span class="sddWA">]);
+</span></span><span class="line" line="5"><span class="sddWA">console.</span><span class="s57r0">log</span><span class="sddWA">(map.</span><span class="s57r0">has</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">)); </span><span class="si6LB">// true
+</span></span><span class="line" line="6"><span class="sddWA">console.</span><span class="s57r0">log</span><span class="sddWA">(map.</span><span class="s57r0">has</span><span class="sddWA">(</span><span class="syA0A">&quot;</span><span class="shai9">city</span><span class="syA0A">&quot;</span><span class="sddWA">)); </span><span class="si6LB">// false
+</span></span></code><!--]--></pre><h3 id="_5-크기-확인하기-size"><a href="#_5-크기-확인하기-size"><!--[-->5. 크기 확인하기 (size)<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">([
+</span></span><span class="line" line="2"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">홍길동</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="3"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="sjKgF">25</span><span class="sddWA">],
+</span></span><span class="line" line="4"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">city</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">서울</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="5"><span class="sddWA">]);
+</span></span><span class="line" line="6"><span class="sddWA">console.</span><span class="s57r0">log</span><span class="sddWA">(map.size); </span><span class="si6LB">// 3
+</span></span></code><!--]--></pre><h2 id="map의-실제-활용-예시"><a href="#map의-실제-활용-예시"><!--[-->Map의 실제 활용 예시<!--]--></a></h2><h3 id="_1-사용자-세션-관리"><a href="#_1-사용자-세션-관리"><!--[-->1. 사용자 세션 관리<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> userSessions </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">();
+</span></span><span class="line" line="2"><span emptylineplaceholder="true">
+</span></span><span class="line" line="3"><span class="sRedq">function</span><span class="s57r0"> createSession</span><span class="sddWA">(</span><span class="sDXMj">userId</span><span class="sddWA">, </span><span class="sDXMj">sessionData</span><span class="sddWA">) {
+</span></span><span class="line" line="4"><span class="sddWA">  userSessions.</span><span class="s57r0">set</span><span class="sddWA">(userId, {
+</span></span><span class="line" line="5"><span class="sRedq">    ...</span><span class="sddWA">sessionData,
+</span></span><span class="line" line="6"><span class="sddWA">    createdAt</span><span class="sRedq">:</span><span class="sDz32"> new</span><span class="s57r0"> Date</span><span class="sddWA">(),
+</span></span><span class="line" line="7"><span class="sddWA">    lastActive</span><span class="sRedq">:</span><span class="sDz32"> new</span><span class="s57r0"> Date</span><span class="sddWA">(),
+</span></span><span class="line" line="8"><span class="sddWA">  });
+</span></span><span class="line" line="9"><span class="sddWA">}
+</span></span><span class="line" line="10"><span emptylineplaceholder="true">
+</span></span><span class="line" line="11"><span class="sRedq">function</span><span class="s57r0"> updateLastActive</span><span class="sddWA">(</span><span class="sDXMj">userId</span><span class="sddWA">) {
+</span></span><span class="line" line="12"><span class="sRedq">  const</span><span class="sddWA"> session </span><span class="sRedq">=</span><span class="sddWA"> userSessions.</span><span class="s57r0">get</span><span class="sddWA">(userId);
+</span></span><span class="line" line="13"><span class="sRedq">  if</span><span class="sddWA"> (session) {
+</span></span><span class="line" line="14"><span class="sddWA">    session.lastActive </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Date</span><span class="sddWA">();
+</span></span><span class="line" line="15"><span class="sddWA">    userSessions.</span><span class="s57r0">set</span><span class="sddWA">(userId, session);
+</span></span><span class="line" line="16"><span class="sddWA">  }
+</span></span><span class="line" line="17"><span class="sddWA">}
+</span></span><span class="line" line="18"><span emptylineplaceholder="true">
+</span></span><span class="line" line="19"><span class="sRedq">function</span><span class="s57r0"> removeSession</span><span class="sddWA">(</span><span class="sDXMj">userId</span><span class="sddWA">) {
+</span></span><span class="line" line="20"><span class="sddWA">  userSessions.</span><span class="s57r0">delete</span><span class="sddWA">(userId);
+</span></span><span class="line" line="21"><span class="sddWA">}
+</span></span></code><!--]--></pre><h3 id="_2-캐시-구현"><a href="#_2-캐시-구현"><!--[-->2. 캐시 구현<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> cache </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">();
+</span></span><span class="line" line="2"><span emptylineplaceholder="true">
+</span></span><span class="line" line="3"><span class="sRedq">function</span><span class="s57r0"> getCachedData</span><span class="sddWA">(</span><span class="sDXMj">key</span><span class="sddWA">) {
+</span></span><span class="line" line="4"><span class="sRedq">  if</span><span class="sddWA"> (cache.</span><span class="s57r0">has</span><span class="sddWA">(key)) {
+</span></span><span class="line" line="5"><span class="sRedq">    const</span><span class="sddWA"> { data, timestamp } </span><span class="sRedq">=</span><span class="sddWA"> cache.</span><span class="s57r0">get</span><span class="sddWA">(key);
+</span></span><span class="line" line="6"><span class="si6LB">    // 1시간 이내의 캐시만 유효
+</span></span><span class="line" line="7"><span class="sRedq">    if</span><span class="sddWA"> (Date.</span><span class="s57r0">now</span><span class="sddWA">() </span><span class="sRedq">-</span><span class="sddWA"> timestamp </span><span class="sRedq">&lt;</span><span class="sjKgF"> 3600000</span><span class="sddWA">) {
+</span></span><span class="line" line="8"><span class="sRedq">      return</span><span class="sddWA"> data;
+</span></span><span class="line" line="9"><span class="sddWA">    }
+</span></span><span class="line" line="10"><span class="sddWA">    cache.</span><span class="s57r0">delete</span><span class="sddWA">(key);
+</span></span><span class="line" line="11"><span class="sddWA">  }
+</span></span><span class="line" line="12"><span class="sRedq">  return</span><span class="sjKgF"> null</span><span class="sddWA">;
+</span></span><span class="line" line="13"><span class="sddWA">}
+</span></span><span class="line" line="14"><span emptylineplaceholder="true">
+</span></span><span class="line" line="15"><span class="sRedq">function</span><span class="s57r0"> setCachedData</span><span class="sddWA">(</span><span class="sDXMj">key</span><span class="sddWA">, </span><span class="sDXMj">data</span><span class="sddWA">) {
+</span></span><span class="line" line="16"><span class="sddWA">  cache.</span><span class="s57r0">set</span><span class="sddWA">(key, {
+</span></span><span class="line" line="17"><span class="sddWA">    data,
+</span></span><span class="line" line="18"><span class="sddWA">    timestamp</span><span class="sRedq">:</span><span class="sddWA"> Date.</span><span class="s57r0">now</span><span class="sddWA">(),
+</span></span><span class="line" line="19"><span class="sddWA">  });
+</span></span><span class="line" line="20"><span class="sddWA">}
+</span></span></code><!--]--></pre><h3 id="_3-map-순회하기"><a href="#_3-map-순회하기"><!--[-->3. Map 순회하기<!--]--></a></h3><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">([
+</span></span><span class="line" line="2"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">홍길동</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="3"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="sjKgF">25</span><span class="sddWA">],
+</span></span><span class="line" line="4"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">city</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">서울</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="5"><span class="sddWA">]);
+</span></span><span class="line" line="6"><span emptylineplaceholder="true">
+</span></span><span class="line" line="7"><span class="si6LB">// 키-값 쌍 순회
+</span></span><span class="line" line="8"><span class="sRedq">for</span><span class="sddWA"> (</span><span class="sRedq">const</span><span class="sddWA"> [key, value] </span><span class="sRedq">of</span><span class="sddWA"> map) {
+</span></span><span class="line" line="9"><span class="sddWA">  console.</span><span class="s57r0">log</span><span class="sddWA">(</span><span class="shai9">`</span><span class="sRedq">${</span><span class="sddWA">key</span><span class="sRedq">}</span><span class="shai9">: </span><span class="sRedq">${</span><span class="sddWA">value</span><span class="sRedq">}</span><span class="shai9">`</span><span class="sddWA">);
+</span></span><span class="line" line="10"><span class="sddWA">}
+</span></span><span class="line" line="11"><span emptylineplaceholder="true">
+</span></span><span class="line" line="12"><span class="si6LB">// 키만 순회
+</span></span><span class="line" line="13"><span class="sRedq">for</span><span class="sddWA"> (</span><span class="sRedq">const</span><span class="sddWA"> key </span><span class="sRedq">of</span><span class="sddWA"> map.</span><span class="s57r0">keys</span><span class="sddWA">()) {
+</span></span><span class="line" line="14"><span class="sddWA">  console.</span><span class="s57r0">log</span><span class="sddWA">(key);
+</span></span><span class="line" line="15"><span class="sddWA">}
+</span></span><span class="line" line="16"><span emptylineplaceholder="true">
+</span></span><span class="line" line="17"><span class="si6LB">// 값만 순회
+</span></span><span class="line" line="18"><span class="sRedq">for</span><span class="sddWA"> (</span><span class="sRedq">const</span><span class="sddWA"> value </span><span class="sRedq">of</span><span class="sddWA"> map.</span><span class="s57r0">values</span><span class="sddWA">()) {
+</span></span><span class="line" line="19"><span class="sddWA">  console.</span><span class="s57r0">log</span><span class="sddWA">(value);
+</span></span><span class="line" line="20"><span class="sddWA">}
+</span></span><span class="line" line="21"><span emptylineplaceholder="true">
+</span></span><span class="line" line="22"><span class="si6LB">// Map을 배열로 변환
+</span></span><span class="line" line="23"><span class="sRedq">const</span><span class="sddWA"> entries </span><span class="sRedq">=</span><span class="sddWA"> Array.</span><span class="s57r0">from</span><span class="sddWA">(map.</span><span class="s57r0">entries</span><span class="sddWA">());
+</span></span><span class="line" line="24"><span class="sRedq">const</span><span class="sddWA"> keys </span><span class="sRedq">=</span><span class="sddWA"> Array.</span><span class="s57r0">from</span><span class="sddWA">(map.</span><span class="s57r0">keys</span><span class="sddWA">());
+</span></span><span class="line" line="25"><span class="sRedq">const</span><span class="sddWA"> values </span><span class="sRedq">=</span><span class="sddWA"> Array.</span><span class="s57r0">from</span><span class="sddWA">(map.</span><span class="s57r0">values</span><span class="sddWA">());
+</span></span></code><!--]--></pre><p><!--[--><br><br><!--]--></p><h2 id="map의-장점"><a href="#map의-장점"><!--[-->Map의 장점<!--]--></a></h2><ol><!--[--><li><!--[--><strong><!--[-->다양한 키 타입<!--]--></strong>: 객체는 문자열이나 심볼만 키로 사용할 수 있지만, Map은 어떤 타입이든 키로 사용 가능합니다.<!--]--></li><li><!--[--><strong><!--[-->순서 보장<!--]--></strong>: 삽입 순서가 보장되어 있어 순회할 때 예측 가능한 순서로 데이터를 얻을 수 있습니다.<!--]--></li><li><!--[--><strong><!--[-->성능<!--]--></strong>: 빈번한 추가/삭제 작업에서 객체보다 더 나은 성능을 보입니다.<!--]--></li><li><!--[--><strong><!--[-->크기 확인<!--]--></strong>: <code><!--[-->size<!--]--></code> 속성으로 쉽게 크기를 알 수 있습니다.<!--]--></li><!--]--></ol><p><!--[--><br><br><!--]--></p><h2 id="주의사항"><a href="#주의사항"><!--[-->주의사항<!--]--></a></h2><ol><!--[--><li><!--[-->JSON 직렬화가 되지 않습니다. Map을 JSON으로 변환하려면 별도의 변환 작업이 필요합니다:<!--]--></li><!--]--></ol><pre class="language-javascript shiki shiki-themes dracula" style=""><!--[--><code><span class="line" line="1"><span class="sRedq">const</span><span class="sddWA"> map </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">([
+</span></span><span class="line" line="2"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">name</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="syA0A">&quot;</span><span class="shai9">홍길동</span><span class="syA0A">&quot;</span><span class="sddWA">],
+</span></span><span class="line" line="3"><span class="sddWA">  [</span><span class="syA0A">&quot;</span><span class="shai9">age</span><span class="syA0A">&quot;</span><span class="sddWA">, </span><span class="sjKgF">25</span><span class="sddWA">],
+</span></span><span class="line" line="4"><span class="sddWA">]);
+</span></span><span class="line" line="5"><span emptylineplaceholder="true">
+</span></span><span class="line" line="6"><span class="si6LB">// Map을 JSON으로 변환
+</span></span><span class="line" line="7"><span class="sRedq">const</span><span class="sddWA"> json </span><span class="sRedq">=</span><span class="sjKgF"> JSON</span><span class="sddWA">.</span><span class="s57r0">stringify</span><span class="sddWA">(Array.</span><span class="s57r0">from</span><span class="sddWA">(map.</span><span class="s57r0">entries</span><span class="sddWA">()));
+</span></span><span class="line" line="8"><span emptylineplaceholder="true">
+</span></span><span class="line" line="9"><span class="si6LB">// JSON을 Map으로 변환
+</span></span><span class="line" line="10"><span class="sRedq">const</span><span class="sddWA"> map2 </span><span class="sRedq">=</span><span class="sDz32"> new</span><span class="s57r0"> Map</span><span class="sddWA">(</span><span class="sjKgF">JSON</span><span class="sddWA">.</span><span class="s57r0">parse</span><span class="sddWA">(json));
+</span></span></code><!--]--></pre><ol start="2"><!--[--><li><!--[-->객체와 달리 Map은 프로토타입 체인의 영향을 받지 않습니다. 이는 보안상의 이점이 있습니다.<!--]--></li><!--]--></ol><p><!--[--><br><br><!--]--></p><style>html pre.shiki code .si6LB, html code.shiki .si6LB{--shiki-default:#6272A4}html pre.shiki code .sRedq, html code.shiki .sRedq{--shiki-default:#FF79C6}html pre.shiki code .sddWA, html code.shiki .sddWA{--shiki-default:#F8F8F2}html pre.shiki code .sDz32, html code.shiki .sDz32{--shiki-default:#FF79C6;--shiki-default-font-weight:bold}html pre.shiki code .s57r0, html code.shiki .s57r0{--shiki-default:#50FA7B}html pre.shiki code .syA0A, html code.shiki .syA0A{--shiki-default:#E9F284}html pre.shiki code .shai9, html code.shiki .shai9{--shiki-default:#F1FA8C}html pre.shiki code .sjKgF, html code.shiki .sjKgF{--shiki-default:#BD93F9}html .default .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html .shiki span {color: var(--shiki-default);background: var(--shiki-default-bg);font-style: var(--shiki-default-font-style);font-weight: var(--shiki-default-font-weight);text-decoration: var(--shiki-default-text-decoration);}html pre.shiki code .sDXMj, html code.shiki .sDXMj{--shiki-default:#FFB86C;--shiki-default-font-style:italic}</style></div><!--]--><!--]--></div><!--]--></section><footer class="footer"><p>© 2025 고래밥양념. Powered by 고래밥양념</p></footer></section></article><!--]--><!--]--><!--[--><!--]--><!----><!--]--><!--[--><!--]--><!--]--><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__" data-src="/2025-04-03-data-type-map/_payload.json?57fb928f-8bf9-406a-960d-4e1075c3cef9">[{"state":1,"once":8,"_errors":9,"serverRendered":5,"path":11,"prerenderedAt":12},["Reactive",2],{"$scolor-mode":3,"$stoasts":7},{"preference":4,"value":4,"unknown":5,"forced":6},"system",true,false,[],["Set"],["ShallowReactive",10],{"/2025-04-03-data-type-map":-1},"/2025-04-03-data-type-map",1743686573287]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{content:{wsUrl:""},mdc:{components:{prose:true,map:{}},headings:{anchorLinks:{h1:false,h2:true,h3:true,h4:true,h5:false,h6:false}}}},app:{baseURL:"/",buildId:"57fb928f-8bf9-406a-960d-4e1075c3cef9",buildAssetsDir:"assets",cdnURL:""}}</script></body></html>
