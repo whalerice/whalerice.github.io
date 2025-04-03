@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const currentPath = computed(() => route.path);
+const currentPath = computed<string>(() => route.path);
 
 // 태그 목록을 가져오는 함수
 const getTags = async () => {
@@ -55,7 +55,7 @@ onMounted(async () => {
         :key="tag"
         color="neutral"
         variant="outline"
-        class="rounded-full m-1 text-xs text-gray-500"
+        class="rounded-full m-1 text-xs text-gray-400"
       >
         {{ tag }}
       </UBadge>

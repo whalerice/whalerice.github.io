@@ -52,7 +52,7 @@ watch(currentPage, async () => {
                 :key="tag"
                 color="neutral"
                 variant="outline"
-                class="rounded-full mr-1 text-xs text-gray-500"
+                class="rounded-full mr-1 text-xs text-gray-400"
               >
                 {{ tag }}
               </UBadge>

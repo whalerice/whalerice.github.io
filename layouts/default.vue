@@ -9,11 +9,11 @@ const { width } = useWindowSize();
 const isMobile = ref(true);
 const year = ref(new Date().getFullYear());
 
-watch(width, (value) => {
+watch(width, (value: any) => {
   isMobile.value = value < 768;
 });
 
-watch(route, (newVal) => {
+watch(route, (newVal: any) => {
   showLeftNav.value = false;
 });
 
