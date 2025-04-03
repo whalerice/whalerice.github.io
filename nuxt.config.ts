@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "dayjs-nuxt",
+    "@nuxt/fonts",
   ],
 
   css: ["@/assets/css/main.css", "@/assets/scss/global.scss"],
@@ -67,7 +68,7 @@ export default defineNuxtConfig({
           async: true,
         },
         {
-          children: `
+          innerHTML: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
